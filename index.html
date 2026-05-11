@@ -61,3 +61,117 @@
     <h1> </h1>
 </body>
 </html>
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #0056b3;
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-bottom: 1px solid #0040a3;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #003d82;
+        }
+
+        .branding {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 40px 0;
+            color: #007BFF;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.2em;
+            }
+
+            .branding {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="title">Pelatihan untuk Sekelompok Pemula</h1>
+        <img src="logo.png" alt="Logo" class="logo">
+    </header>
+
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="#cara-bermain">CARA BERMAIN</a>
+        <a href="#peraturan">PERATURAN</a>
+        <a href="#manfaat">MANFAAT</a>
+        <a href="#edukasi">EDUKASI</a>
+    </nav>
+
+    <main>
+        <div class="branding">CBDAPP</div>
+        <div class="subtitle">Your Gateway to Learning</div>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Tutup menu saat salah satu link diklik
+        const menuLinks = dropdownMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
