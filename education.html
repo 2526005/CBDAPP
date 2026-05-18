@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <a href="index.html">back</a>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #007BFF;
+            padding: 20px;
+            color: white;
+        }
+        .hamburger {
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            background-color: #0056b3;
+            border-radius: 5px;
+            padding: 10px 0;
+            min-width: 200px;
+            z-index: 1000;
+        }
+        .menu-dropdown.active {
+            display: block;
+        }
+        .menu-item {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .menu-item:hover {
+            background-color: #003d82;
+        }
+        .logo {
+            height: 50px;
+            margin-left: 15px;
+        }
+        .title {
+            text-align: center;
+            flex: 1;
+            font-size: 2em;
+        }
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        .content p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .module-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .module-card h3 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .module-card .level {
+            display: inline-block;
+            background-color: #e7f3ff;
+            color: #007BFF;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <nav class="menu-dropdown" id="menuDropdown">
+            <a href="index.html" class="menu-item">HOME</a>
+            <a href="cara-bermain.html" class="menu-item">CARA BERMAIN</a>
+            <a href="peraturan.html" class="menu-item">PERATURAN</a>
+            <a href="manfaat.html" class="menu-item">MANFAAT</a>
+            <a href="edukasi.html" class="menu-item">EDUKASI</a>
+        </nav>
+        <h1 class="title">Pelatihan untuk Sekelompok Pemula</h1>
+        <img src="logo.png" alt="Logo" class="logo">
+    </header>
+
+    <main>
+        <h2>EDUKASI</h2>
+        <div class="content">
+            <p>Berikut adalah modul-modul pembelajaran yang tersedia di platform CBDAPP. Setiap modul dirancang untuk memberikan pemahaman mendalam tentang topik tertentu.</p>
+            
+            <div class="module-card">
+                <h3>Modul 1: Pengenalan CBDAPP</h3>
+                <span class="level">Beginner</span>
+                <p>Pelajari dasar-dasar platform CBDAPP, fitur-fitur utama, dan cara menggunakan aplikasi dengan efektif. Durasi: 2 jam</p>
+            </div>
+            
+            <div class="module-card">
+                <h3>Modul 2: Memahami Prinsip Dasar</h3>
+                <span class="level">Beginner</span>
+                <p>Pahami konsep-konsep fundamental yang menjadi landasan platform. Materi ini penting sebelum melanjutkan ke modul selanjutnya. Durasi: 3 jam</p>
+            </div>
+            
+            <div class="module-card">
+                <h3>Modul 3: Praktik Pertama</h3>
+                <span class="level">Beginner</span>
+                <p>Terapkan pengetahuan Anda melalui latihan praktis yang dirancang khusus. Selesaikan proyek pertama Anda dengan bimbingan mentor. Durasi: 4 jam</p>
+            </div>
+            
+            <div class="module-card">
+                <h3>Modul 4: Strategi dan Teknik</h3>
+                <span class="level">Intermediate</span>
+                <p>Pelajari strategi-strategi canggih dan teknik-teknik profesional untuk meningkatkan skill Anda. Durasi: 5 jam</p>
+            </div>
+            
+            <div class="module-card">
+                <h3>Modul 5: Proyek Capstone</h3>
+                <span class="level">Intermediate</span>
+                <p>Kerjakan proyek besar yang mengintegrasikan semua ilmu yang telah dipelajari. Ini adalah puncak pembelajaran Anda. Durasi: 6 jam</p>
+            </div>
+            
+            <p style="margin-top: 20px; font-style: italic; color: #666;">Catatan: Setiap modul dilengkapi dengan video pembelajaran, materi teks, kuis, dan praktik hands-on.</p>
+        </div>
+        <a href="index.html" class="back-button">← Kembali ke Beranda</a>
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        hamburgerBtn.addEventListener('click', function() {
+            menuDropdown.classList.toggle('active');
+        });
+
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuDropdown.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header')) {
+                menuDropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
